@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأمن السيبراني - Kali Linux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* الأنيميشنات المخصصة */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-animation { animation: fadeIn 1.5s ease-in-out; }
+        .footer-animation { animation: slideUp 1.5s ease-in-out; }
+
+        .button {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- الهيدر الرئيسي -->
+    <header class="header-animation bg-gray-900 py-4 px-6">
+        <h1 class="text-3xl font-bold text-green-500 mb-4">مرحبًا بك في عالم الأمن السيبراني</h1>
+        <nav class="border-b border-gray-700 pb-4">
+            <ul class="flex flex-wrap gap-4">
+                <li><a href="#kali-linux" class="text-blue-400 hover:text-blue-300 transition-colors">تثبيت Kali Linux</a></li>
+                <li><a href="protection_accounts.html" class="text-gray-400 hover:text-white transition-colors">حماية الحسابات</a></li>
+                <li><a href="cyber_attacks.html" class="text-gray-400 hover:text-white transition-colors">الهجمات السيبرانية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- شريط المعلومات العلوي -->
+    <div class="flex items-center justify-between p-3 bg-gray-800 border-b border-gray-700">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-shield-alt text-blue-400"></i>
+            <span class="text-sm">النظام الآمن</span>
+        </div>
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-user-secret text-red-400"></i>
+            <span class="text-sm">Anonymous Mode</span>
+        </div>
+    </div>
+
+    <!-- محتوى Kali Linux -->
+    <main class="p-4 max-w-4xl mx-auto" id="kali-linux">
+        <section class="card-hover bg-gray-800 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-green-400 mb-4">دليل تثبيت Kali Linux</h2>
+            
+            <div class="space-y-8">
+                <!-- الخطوة 3 -->
+                <div class="card-hover bg-gray-700 p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">الخطوة 3: تنزيل سكربت التثبيت</h3>
+                    <img src="https://storage.googleapis.com/a1aa/image/GIRio7diKQi0VBlCnrTPiilxCAjHfsH6SavW5LvJHQg.jpg" 
+                         alt="Kali Linux" 
+                         class="w-full h-64 object-cover rounded-lg mb-4">
+                    <p class="mb-3 text-gray-300">استخدم الأمر التالي لتنزيل السكربت:</p>
+                    <code class="block bg-gray-900 p-3 rounded font-mono text-sm text-green-300">
+                        wget -O install-nethunter-termux https://offs.ec/2MceZWr
+                    </code>
+                </div>
+
+                <!-- الخطوة 4 -->
+                <div class="card-hover bg-gray-700 p-4 rounded-lg mt-6">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">الخطوة 4: تفعيل السكربت</h3>
+                    <img src="https://storage.googleapis.com/a1aa/image/-g05uha8aNyxkKRCn1__ah3Cebekn89s7tZCtPcUogM.jpg" 
+                         alt="Anonymous" 
+                         class="w-full h-64 object-cover rounded-lg mb-4">
+                    <p class="mb-3 text-gray-300">أعط صلاحيات التشغيل وتنفيذ السكربت:</p>
+                    <code class="block bg-gray-900 p-3 rounded font-mono text-sm text-green-300">
+                        chmod +x * && ./install-nethunter-termux
+                    </code>
+                    <p class="mt-4 text-yellow-400 text-sm">ملاحظة: قد تستغرق العملية أكثر من 30 دقيقة حسب سرعة الاتصال</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer-animation bg-gray-900 py-4 px-6 mt-8 border-t border-gray-800">
+        <div class="flex justify-between items-center text-sm text-gray-400">
+            <p>© 2024 الأمن السيبراني. جميع الحقوق محفوظة</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-400 transition-colors">الشروط والأحكام</a>
+                <a href="#" class="hover:text-blue-400 transition-colors">الخصوصية</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
