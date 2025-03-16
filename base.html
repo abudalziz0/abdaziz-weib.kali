@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - الأمن السيبراني</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- شريط التنقل -->
+    <nav class="bg-gray-800 py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-green-400 hover:text-green-300 transition-colors">
+                <i class="fas fa-shield-alt mr-2"></i>CyberSecure
+            </a>
+            <div class="space-x-6">
+                <a href="{{ url_for('kali_install') }}" class="hover:text-blue-300">تثبيت كالي</a>
+                <a href="{{ url_for('protection_accounts') }}" class="hover:text-blue-300">حماية الحسابات</a>
+                <a href="{{ url_for('cyber_attacks') }}" class="hover:text-blue-300">الهجمات</a>
+                <a href="{{ url_for('tools') }}" class="hover:text-blue-300">الأدوات</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة -->
+    <main class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                © 2024 CyberSecure. جميع الحقوق محفوظة
+                <span class="mx-4">|</span>
+                <a href="#" class="hover:text-blue-300">الشروط والأحكام</a>
+                <span class="mx-4">|</span>
+                <a href="#" class="hover:text-blue-300">اتصل بنا</a>
+            </p>
+            <div class="mt-4 space-x-4">
+                <i class="fab fa-linux text-2xl hover:text-green-400 cursor-pointer"></i>
+                <i class="fab fa-windows text-2xl hover:text-blue-400 cursor-pointer"></i>
+                <i class="fab fa-android text-2xl hover:text-green-300 cursor-pointer"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
