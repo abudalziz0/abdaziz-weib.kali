@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8 text-green-400">دليل تثبيت Kali Linux</h1>
+    
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-400">المتطلبات الأساسية:</h2>
+        <ul class="list-decimal list-inside space-y-3 text-gray-300">
+            <li>مساحة تخزين 20GB على الأقل</li>
+            <li>4GB RAM أو أكثر</li>
+            <li>اتصال إنترنت مستقر</li>
+            <li>نظام 64-bit</li>
+        </ul>
+    </div>
+
+    <div class="space-y-12">
+        <!-- الخطوة 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-blue-300">الخطوة 3: تنزيل السكربت</h3>
+            <img src="{{ url_for('static', filename='images/step3.jpg') }}" 
+                 alt="Kali Linux" 
+                 class="mb-4 rounded-lg border border-gray-700">
+            <div class="bg-gray-900 p-4 rounded">
+                <code class="text-green-300 font-mono">wget -O install-nethunter-termux https://offs.ec/2MceZWr</code>
+                <p class="mt-3 text-yellow-400 text-sm">ملاحظة: تأكد من تنزيل السكربت من مصادر موثوقة</p>
+            </div>
+        </div>
+
+        <!-- الخطوة 4 -->
+        <div class="bg-gray-800 p-6 rounded-lg hover:shadow-xl transition-shadow">
+            <h3 class="text-xl font-semibold mb-4 text-blue-300">الخطوة 4: تشغيل السكربت</h3>
+            <img src="{{ url_for('static', filename='images/step4.jpg') }}" 
+                 alt="Anonymous" 
+                 class="mb-4 rounded-lg border border-gray-700">
+            <div class="bg-gray-900 p-4 rounded">
+                <code class="text-green-300 font-mono">chmod +x * && ./install-nethunter-termux</code>
+                <div class="mt-4 p-4 bg-red-900 rounded text-red-200">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    تحذير: لا تشغل سكربتات غير موثوقة قد تحتوي على ثغرات أمنية
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
